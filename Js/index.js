@@ -113,8 +113,25 @@ window.adjuntarConfesion = ()=>{//creo una funcion para cargar la confesion y a 
 
 
 window.eliminarConfesion = (incremento)=>{
-    window.confesion.splice(incremento-1,1);//splice borra una lista  
-    window.adjuntarConfesion();//incremento -1,1 bora la posicion, el indice 
+    Swal.fire({
+        title: 'Quieres Eliminar el Registro?',
+        text: "No podras recuperarlo!",
+        icon: 'error',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Deseo Eliminar!'
+      }).then((result) => {
+        if (result.isConfirmed) {//Promesa
+            window.confesion.splice(incremento-1,1);//splice borra una lista  
+            window.adjuntarConfesion();//incremento -1,1 bora la posicion, el indice 
+          Swal.fire(
+            'Eliminado!',
+            'Tu registro ha sido borrado.',
+            'success'
+          )
+        }
+      })
 }
 
 window.confesion = [];//creo una lista para guardar las confesiones
