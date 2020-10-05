@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="Css/index.css">
+    <title>Confesiones Inacap</title>
+  </head>
+  <body>
+    <header class="container-fluid bg-danger">
+        <div  class="row">
+            <div class="col-lg col-sm col-md">
+                <div class="divHeader">
+                    <span>Confesiones INACAP</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container-fluid p-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card border border-danger">
+                    <div class="card-header bg-danger bg-gradient text-white">
+                        <h5>Ingresar Confesion</h5>
+                    </div>
+                    <div id="errores-div">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group mt-3">
+                            <label for="nombre-txt">Usuario</label>
+                            <input type="text" id="nombre-txt" class="form-control">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="descripcion-tarea">Confesion</label>
+                            <input type="text" id="descripcion-tarea" class="form-control">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="tipo-select">Carrera</label>
+                            <select name="select" id="tipo-select" class="form-control">
+                                <option value="#">Selecciona una opcion</option>
+                                <option value="Desarrollo Web & Mobile">Desarrollo Web & Mobile</option>
+                                <option value="Analista Programador">Analista Programador</option>
+                                <option value="Diseño Grafico Profesional">Diseño Grafico Profesional</option>
+                            </select>
+                        </div>
+                        <div class="form-group mt-3">
+                            <button class="btn btn-primary" id="btn-enviar" type="button" >Enviar Confesion</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Folio</th>
+                                    <th>Nombre</th>
+                                    <th>Confesion</th>
+                                    <th>Carrera</th>
+                                    <th>Valoracion</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody id="confesiones-tabla">
+
+                            </tbody>
+                            <caption>*Nombre en rojo pertenece a confesion destacada</caption>
+                        </table>   
+            </div>
+     </div>
+    </section>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    
+    <script src="Vector/js/tinymce/tinymce.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
